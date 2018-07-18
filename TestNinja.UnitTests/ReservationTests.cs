@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using TestNinja.Fundamentals;
-using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
+
 
 namespace TestNinja.UnitTests
 {
@@ -19,8 +19,11 @@ namespace TestNinja.UnitTests
             var result = reservation.CanBeCancelledBy(new User {IsAdmin = true});
 
             // Assert
-           // Assert.IsTrue(result);
-            Assert.That(result, Is.True);
+
+            // Different ways to assert using NUnit
+            //Assert.IsTrue(result);
+            //Assert.That(result, Is.True);
+            Assert.That(result == true);
         }
 
         [Test]
