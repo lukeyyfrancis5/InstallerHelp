@@ -11,11 +11,16 @@ namespace TestNinja.Fundamentals
         
         public void Log(string error)
         {
+            // This Method has 3 TestCases
+            // Null
+            // ""
+            // " " 
+
             if (String.IsNullOrWhiteSpace(error))
                 throw new ArgumentNullException();
-                
-            LastError = error; 
-            
+
+            LastError = error;
+
             // Write the log to a storage
             // ...
 
