@@ -43,8 +43,7 @@ namespace TestNinja.Fundamentals
 
             logger.Log("a");
 
-            Assert.That(id, Is.Not.EqualTo(Guid.Empty));
+            Assert.That(id, Is.Not.EqualTo(Guid.Empty ));
         }
-
     }
 }
