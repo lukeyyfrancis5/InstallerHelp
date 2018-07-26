@@ -16,9 +16,6 @@ namespace TestNinja.UnitTests
             // Arrange
             var service = new VideoService();
 
-            // Replace FakeFileReader with real FileReader
-            service.FileReader = new FakeFileReader();
-
             // Act
             var result = service.ReadVideoTitle();
 
