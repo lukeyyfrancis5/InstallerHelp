@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using TestNinja.Mocking;
 
+
 namespace TestNinja.UnitTests
 {
-    class FakeFileReader : IFileReader
+    public class FakeFileReader : IFileReader
     {
         public string Read(string path)
         {
             return "";
         }
-
     }
 }
