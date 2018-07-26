@@ -13,10 +13,16 @@ namespace TestNinja.UnitTests
     {
         public void ReadVideoTitle_EmptyFile_ReturnError()
         {
+            // Arrange
             var service = new VideoService();
 
-            var result = service.ReadVideoTitle(new FakeFileReader());
+            // Replace FakeFileReader with real FileReader
+            service.FileReader = new FakeFileReader();
 
+            // Act
+            var result = service.ReadVideoTitle();
+
+            // Assert
             Assert.That(result, Does.Contain("error").IgnoreCase);
         }
     }
