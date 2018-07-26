@@ -19,6 +19,7 @@ namespace TestNinja.Mocking
 
         public string ReadVideoTitle()
         {
+            // Mock IFileReader needs to be passed as a string
             var str = _fileReader.Read("video.txt");
             var video = JsonConvert.DeserializeObject<Video>(str);
             if (video == null)
