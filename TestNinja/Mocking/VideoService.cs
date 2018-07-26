@@ -29,6 +29,9 @@ namespace TestNinja.Mocking
             return video.Title;
         }
 
+        // Testing method possibilities 
+        // Repo returns empty list- [] => ""
+        // Repo returns list of 1 or more objects- [{},{},{} => "1,2,3"]
         public string GetUnprocessedVideosAsCsv()
         {
             var videoIds = new List<int>();
